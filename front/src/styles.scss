@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+//@import './app.theme';
+@use "sass:map";
+@import './theme.scss';
+
+$base-color: #c6538c;
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -20px;
+}
+
+footer{
+    height: 50px;
+    background: map.get($mat-primary, "darker");
+    position: relative;
+
+
+    p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: map.get(map.get($mat-primary, "contrast"), "darker");
+        text-align: center;
+        margin: 0;
+    }
+}
+

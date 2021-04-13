@@ -1,0 +1,28 @@
+@use "sass:map";
+@import '../../theme.scss';
+
+mat-grid-tile{
+    background: map.get($mat-primary, "lighter");
+
+    p {
+        padding: 35px;
+        color: map.get(map.get($mat-primary, "contrast"), "lighter");
+    }
+
+    mat-list-item {
+        padding: 0px 35px
+    }
+}
+mat-toolbar{
+    text-align: center;
+
+}
+.filler{
+    flex: 1 1 auto;
+}
+img{
+    width: auto;
+    height: 100%;
+}
+
+
