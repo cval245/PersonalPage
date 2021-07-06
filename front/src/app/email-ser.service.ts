@@ -11,13 +11,11 @@ import { environment } from '../environments/environment';
 export class EmailSerService {
 
     baseUrl = environment.API_URL + 'email/';
-    //baseUrl = `http://127.0.0.1:8000/email/`;
 
     constructor(private http: HttpClient) { }
 
     public sendMail(mail: Mail): Observable<Mail> {
-        //console.log('send mail', mail, this.baseUrl)
-        //this.http.get('http://localhost:8000/email/')
+        console.log('send mail', mail, this.baseUrl)
         return this.http.post<Mail>(this.baseUrl, mail)
     }
 }

@@ -13,7 +13,8 @@ import { Mail } from '../mail.model';
 })
 export class HomePageComponent {
 
-    constructor(private bottomSheet: MatBottomSheet,
+    constructor(
+        private bottomSheet: MatBottomSheet,
                 public dialog: MatDialog,
                 public emailFormService: EmailFormService,
                 private emailServ: EmailSerService,
@@ -56,5 +57,4 @@ export class HomePageComponent {
      constructor(private bottomSheetRef: MatBottomSheetRef<ContactMeSheet>,
                  ){}
 
-     
  }

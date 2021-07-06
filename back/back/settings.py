@@ -25,7 +25,7 @@ SECRET_KEY = '4$ki-cj6w)vr4fs$^nmqr-3x5os^g89c)8#r-gi(q%p9uj*r&m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['api.cval.me']
+ALLOWED_HOSTS = ['localhost','api.cval.me']
 
 
 # Application definition
@@ -72,7 +72,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'back.wsgi.application'
-
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -124,6 +124,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+    "https://localhost:8000",
     "http://localhost:4200",
     "http://www.cval.me",
     "http://cval.me",

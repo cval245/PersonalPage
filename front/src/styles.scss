@@ -1,33 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
 //@import './app.theme';
-@use "sass:map";
+
+@use '~@angular/material' as mat;
 @import './theme.scss';
 
-$base-color: #c6538c;
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -20px;
+app-root {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+}
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: $light-background;
 }
 
-footer{
-    height: 50px;
-    background: map.get($mat-primary, "darker");
-    position: relative;
+#footer {
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:60px;
+    background: map-get($theme-primary, 'darker');
+}
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
+.app-footer, .app-nav, .app-aside, .app-header, .app-main{
+    padding:20px;
+    margin: 5px;
+}
 
-    p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: map.get(map.get($mat-primary, "contrast"), "darker");
-        text-align: center;
-        margin: 0;
+.over-main{
+    flex: 1;
+    display: flex;
+}
+.app-main {
+    flex: 1 1 300px;
+    min-height: 300px;
+}
+
+.app-footer{
+    background: map-get($theme-primary, 'main');
+    flex: 0 0 40px;
+
+    h4 {
+        color: $light-text;
     }
 }
+.app-nav {
+    flex: 0 2 150px;
+    background: map-get($theme-primary, 'lighter');
+}
+.app-aside {
+    flex: 0 2 200px;
+    //background: map-get($theme-primary, 'lighter');
+}
 
+.hover-class:hover{
+    background-color: map-get($theme-primary, 'darker')
+}

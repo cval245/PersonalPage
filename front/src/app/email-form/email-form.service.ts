@@ -10,13 +10,15 @@ export class EmailFormService {
     // Create Subject
     private ser = new Subject();
     // as observable
-    private getServ = this.ser.asObservable();
+    //private getServ = this.ser.asObservable();
 
     constructor() { }
 
     getSer(){
         console.log('getServ')
-        return this.getServ
+        //console.log('gggg', this.getServ.subscribe(x => console.log("cccc",  x)))
+        //return this.getServ
+        return this.ser
     }
 
     setSer(data: Mail){

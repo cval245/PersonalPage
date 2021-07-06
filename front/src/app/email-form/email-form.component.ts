@@ -30,17 +30,13 @@ export class EmailFormComponent implements OnInit {
 
     createFormGroup(){
         return new FormGroup({
-          //  personalData: new FormGroup({
-                name: new FormControl('', Validators.required),
-                company: new FormControl(),
+            name: new FormControl('', Validators.required),
+            company: new FormControl(),
             email_address: new FormControl('',
                                            [Validators.required,
-                                           Validators.email]),
-           // }),
-            //email: new FormGroup({
-                subject: new FormControl('', Validators.required),
-                content: new FormControl('', Validators.required),
-            //})
+                                            Validators.email]),
+            subject: new FormControl('', Validators.required),
+            content: new FormControl('', Validators.required),
         })
     }
 
@@ -58,18 +54,14 @@ export class EmailFormComponent implements OnInit {
     }
 
     onSubmit(){
+        if (this.submitted == false) {
+            if(this.emailForm.valid) {
+                console.log('email submit')
+                this.submitted = true;
+                this.emailFormService.setSer(this.emailForm.value)
+                this.close()
+            }
+        }
 
-        if (this.submitted == false){
-        if(this.emailForm.valid) {
-            console.log('email submit')
-            this.submitted = true;
-            this.emailFormService.setSer(this.emailForm.value)
-            this.close()
-            // go to saving service
-            // upload to Observable
-            // SetSer
-        }
-        }
     }
-
 }

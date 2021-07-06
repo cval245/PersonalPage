@@ -21,16 +21,19 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {TextFieldModule} from '@angular/cdk/text-field';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    ContactComponent,
-    EmailFormComponent
-  ],
+    declarations: [
+        AppComponent,
+        HomePageComponent,
+        ContactComponent,
+        EmailFormComponent
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
+        FlexLayoutModule,
         BrowserAnimationsModule,
         ReactiveFormsModule,
         HttpClientModule,

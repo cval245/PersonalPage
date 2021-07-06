@@ -1,112 +1,94 @@
-<mat-toolbar color="primary">
-    <span class="filler"></span>
-    Christopher Valentine
-    <span class="filler"></span>
-</mat-toolbar>
-<div>
-    <mat-grid-list cols="2" rowHeight="500px">
-        <mat-grid-tile>
-
-            <img src="../../assets/images/tree-drawing.png"
-                 class="img-fluid">
-            <div class ="center" >
+<h2>
+    Resume
+</h2>
+<div gdcolumns="repeat(auto-fill, minmax(300px, 1fr))" gdgap="10px"
+     style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px;"
+>
+            <div><p>I am transitioning from a career in IP (patents) to web development.  I started this journey making a quiz app to help me study for a patent exam, but ended up having a lot of fun making the app, at least more fun than studying for a patent exam.</p>
             </div>
-        </mat-grid-tile>
-        <mat-grid-tile
-            [colspan]="1"
-            [rowspan]="2">
-            <div class="flex-container" >
-                <mat-grid-tile-header >
-                    <span class="filler"></span>
-                    <h2>
-                        Resume
-                    </h2>
-                    <span class="filler"></span>
-                </mat-grid-tile-header>
-                    <p>I am transitioning from a career in IP (patents) to web development.  I started this journey making a quiz app to help me study for a patent exam, but ended up having a lot of fun making the app, at least more fun than studying for a patent exam.</p>
-
-                <mat-list role="list">
+            <div>
+            <mat-list role="list">
                 <mat-divider></mat-divider>
                 <div mat-subheader>Skills</div>
                 <mat-list-item role="listitem">
                     <div matLine>
                         Django
-                    </div>
-                    <div matLine>
-                        DjangoRestFramework
-                    </div>
-                    <div matLine>
-                        Angular
-                    </div>
-                    <div matLine>
-                        Postgresql
-                    </div>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                    <div matLine>
-                        Experience with Patents
-                    </div>
-                    <div matLine>
-                        More details available upon request
-                    </div>
-                </mat-list-item>
+                </div>
+                <div matLine>
+                    DjangoRestFramework
+                </div>
+                <div matLine>
+                    Angular
+                </div>
+                <div matLine>
+                    Postgresql
+                </div>
 
-                <mat-divider></mat-divider>
-                <div mat-subheader>Demo Websites</div>
-                <mat-list-item role="listitem">
-                    <div matLine>
-                        Patent Portfolio (MVVM, Angular + Django)
-                    </div>
-                    <div matLine>
-                        <a href="https://patport.cc" >
-                            https://patport.cc
-                        </a>
-                    </div>
-                </mat-list-item>
-
-                <mat-list-item role="listitem">
-                    <div matLine>
-                        Quiz Course (MVC, Django)
-                    </div>
-                    <div matLine>
-                        <a href="https://gentle-brushlands-05163.herokuapp.com">
-                            https://gentle-brushlands-05163.herokuapp.com
-                        </a>
-                    </div>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                    <div matLine>
-                        GitHub Account
-                    </div>
-                    <div matLine>
-                        <a href="https://github.com/cval245">
-                            https://github.com/cval245</a>
-                    </div>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-                <div mat-subheader>Education</div>
-                <mat-list-item role="listitem">
-                    <div matLine> B.S. Physics - 2015</div>
-                    <div matLine> Roanoke College</div>
-                    <div matLine> Salem, VA</div>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-                <div mat-subheader>Previous Work Experience</div>
-                <mat-list-item role="listitem">
-                    <div matLine> IP Specialist (patents)</div>
-                    <div matLine> Lintec of America, Inc</div>
-                    <div matLine> Nano-Science & Technology Center
-                    </div>
-                    <div matLine> Richardson, TX</div>
-                </mat-list-item>
-                </mat-list>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <div matLine>
+                    Experience with Patents
+                </div>
+                <div matLine>
+                    More details available upon request
+                </div>
+            </mat-list-item>
+            </mat-list>
             </div>
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <button mat-flat-button color="accent"
-                    (click)="openBottomSheet()">
-                Call me</button>
-            <button mat-flat-button color="accent" (click)="openDialog()">Email Me</button>
-        </mat-grid-tile>
-    </mat-grid-list>
-    </div>
+            <div>
+            <mat-list>
+            <mat-divider></mat-divider>
+            <div mat-subheader>Demo Websites</div>
+            <mat-list-item role="listitem">
+                <div matLine>
+                    Patent Portfolio (MVVM, Angular + Django)
+                </div>
+                <div matLine>
+                    <a href="https://patport.cc" >
+                        https://patport.cc
+                    </a>
+                </div>
+            </mat-list-item>
+            
+            <mat-list-item role="listitem">
+                <div matLine>
+                    Quiz Course (MVC, Django)
+                </div>
+                <div matLine>
+                    <a href="https://gentle-brushlands-05163.herokuapp.com">
+                        https://gentle-brushlands-05163.herokuapp.com
+                    </a>
+                </div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <div matLine>
+                    GitHub Account
+                </div>
+                <div matLine>
+                    <a href="https://github.com/cval245">
+                        https://github.com/cval245</a>
+                </div>
+            </mat-list-item>
+            </mat-list>
+            </div>
+            <div>
+            <mat-list>
+            <mat-divider></mat-divider>
+            <div mat-subheader>Education</div>
+            <mat-list-item role="listitem">
+                <div matLine> B.S. Physics - 2015</div>
+                <div matLine> Roanoke College</div>
+                <div matLine> Salem, VA</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <div mat-subheader>Previous Work Experience</div>
+            <mat-list-item role="listitem">
+                <div matLine> IP Specialist (patents)</div>
+                <div matLine> Lintec of America, Inc</div>
+                <div matLine> Nano-Science & Technology Center
+                </div>
+                <div matLine> Richardson, TX</div>
+            </mat-list-item>
+            </mat-list>
+            </div>
+</div>
