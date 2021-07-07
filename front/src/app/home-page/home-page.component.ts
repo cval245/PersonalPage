@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
-import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { EmailFormComponent } from '../email-form/email-form.component';
@@ -26,7 +26,6 @@ export class HomePageComponent {
                ) {
                 this.matIconRegistry.addSvgIcon(
                 "github",
-                //this.domSanitizer.bypassSecurityTrustResourceUrl("images/github.svg")
                 this.domSanitizer.bypassSecurityTrustResourceUrl("/assets/images/github.svg")
             )
         this.emailFormService.getSer().subscribe(data => this.sendEmail(data))

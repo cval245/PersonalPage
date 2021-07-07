@@ -67,5 +67,22 @@ body {
 }
 
 .hover-class:hover{
-    background-color: map-get($theme-primary, 'darker')
+    background-color: map-get($theme-primary, 'darker');
 }
+mat-list{
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 25px;
+        background: map-get($theme-primary, 'lighter');
+        height: 50px;
+        h2 {
+            color: $dark-text;
+            line-height: 0.1;
+            margin: 0px
+            }
+        }
+    }
+
+    
