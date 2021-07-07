@@ -24,6 +24,7 @@ export class AppComponent {
         private emailServ: EmailSerService,
     ){
         this.getSerSub = this.emailFormService.getSer().subscribe(data => {
+            
             console.log('sdfsdfsdfsdfsdf')
             //this.sendLEmail(data)
         })

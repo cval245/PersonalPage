@@ -2,7 +2,8 @@
 
     <header class=".app-header">
         <mat-toolbar color="primary">
-            <h3>Christopher Valentine</h3>
+            <h3 fxShow fxHide.xs>Christopher Valentine</h3>
+            <h3 fxHide fxShow.xs>C.Valentine</h3>
             <div fxFlex fxLayout="row" fxLayoutAlign="end center">
                 <button mat-flat-button color="primary" class="hover-class"
                         (click)="openBottomSheet()">
@@ -25,7 +26,9 @@
 
     <footer class="app-footer" fxLayout="row" fxLayoutAlign="center center">
         <h4>
-            Copyright 2021, stealing my identity is highly illegal!!
+            Copyright 2021
         </h4>
     </footer>
+
+    
 </div>
