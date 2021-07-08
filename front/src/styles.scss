@@ -47,6 +47,7 @@ body {
 .app-main {
     flex: 1 1 300px;
     min-height: 300px;
+    max-width: 600px;
 }
 
 .app-footer{
@@ -59,22 +60,46 @@ body {
 }
 .app-nav {
     flex: 0 2 150px;
-    background: map-get($theme-primary, 'lighter');
+    background: map-get($theme-accent, 'lighter');
 }
 .app-aside {
     flex: 0 2 200px;
+    background: map-get($theme-accent, 'lighter');
     //background: map-get($theme-primary, 'lighter');
 }
 
 .hover-class:hover{
     background-color: map-get($theme-primary, 'darker');
 }
-mat-list{
-    .header-container{
+.hover-class-accent:hover{
+    background-color: map-get($theme-accent, 'darker');
+}
+
+.item{
+    display: flex;
+    // flex-direction: row-reverse;
+    // justify-content: flex-start;
+    // align-items: baseline;
+    height: 50px;
+    mat-icon{
+        scale: 1.4;
+        padding: 7px;
+        font-size: 24px;
+    }
+    .font-s {
+        padding-left: 5px;
+        margin: 0;
+        font-size: 20;
+    }
+
+}
+.header-container{
         display: flex;
         align-items: center;
         justify-content: flex-start;
         padding-left: 25px;
+        margin-top: 15px;
+        margin-bottom: 5px;
         background: map-get($theme-primary, 'lighter');
         height: 50px;
         h2 {
@@ -83,6 +108,43 @@ mat-list{
             margin: 0px
             }
         }
-    }
+mat-card{
+    padding: 0px;
+    margin: 15px;
 
+    .mat-card-header{
+        background-color: map-get($theme-accent, 'darker');
+        padding:3px;
+        margin: 0px;
+        margin-bottom: 5px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 50px;
+        .mat-card-title{
+            margin-bottom: 0px;
+            line-height: 1.2;
+            margin: 5px;
+    }
+    .mat-card-content{
+            max-width: 200px;
+        
+       
+    }
+    .mat-card-actions-class{
+        margin-left: 20px;
+        padding-left: 60px;
+    }
+   
+    }
     
+}
+.resume-btn{
+    background-color: #d12294;
+    color: white;
+}
+.hover-resume-btn:hover{
+    background-color: #c0147e;
+    color: white;
+}

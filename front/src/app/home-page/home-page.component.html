@@ -1,73 +1,131 @@
-<h2>
-    Resume
-</h2>
-<div gdcolumns="repeat(auto-fill, minmax(320px, 1fr))" gdgap="10px"
-     style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px;"
->
-            <div><p>
+<div>
+<div style="width: auto; height:200px; text-align: center; padding: 0px;">
+    <img style='width: 100%; height: 100%; object-fit: cover;' src="assets/images/triangles-min.svg">
+    </div>
+    <div class="header-container mat-typography">
+                    <h2 class="mat-title">About</h2>
+                </div>
+
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <div class='personal-statement'><p>
             I am transitioning from a career in IP (patents) to web development.  I started this journey making a quiz app as a study aid for a professional exam.  Now I am excited to be improving my skills daily.
             </p>
+            
             </div>
             <div>
-            <mat-list role="list">
+        <button fxHide fxShow.xs mat-raised-button class="hover-resume-btn resume-btn" 
+            (click)="download()" >
+        Resume
+        </button>
+        </div>
+        </div>
+
+            <div>
+            <div role="listitem">
+
+                <div class=header-container>
+                <div class="mat-typography">
+                    <h2 class="mat-title">Websites</h2>
+                </div>
+                </div>
+                <mat-card>
+                <mat-card-header>
+                <mat-card-title>
+                    Patport Patent Cost Estimator
+                </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                <mat-card-subtitle>Angular + Django</mat-card-subtitle>
+                <div class="img-container">
+                <img fxFlex src="assets/images/patport.png" (click)="openImageModal('assets/images/patport.png')">
+                <ng-template #dialogRef let-data><img class="override-img" src={{data}}></ng-template>
+                <img fxFlex src="assets/images/patport-chart.png"
+                    (click)="openImageModal('assets/images/patport-chart.png')">
+                </div>
+                <p>
+                   App for estimating the costs of a patent portfolio based off the patent filing plan. 
+                </p>
+                </mat-card-content>
+                <mat-card-actions class="mat-card-actions-class">
+                    <a mat-raised-button class="hover-class-accent text-button" color="accent" href="https://patport.cc" >
+                        Patport
+                    </a>
+                    <a mat-icon-button class="hover-class-accent" color="accent"
+                    href="https://github.com/cval245/pestimator">
+                    <mat-icon svgIcon="github" aria-hidden="false"></mat-icon>
+                    </a>
+                </mat-card-actions>
+                    </mat-card>
+            </div>
+            <mat-card>
+                <mat-card-header>
+            <mat-card-title>
+                Quiz App
+            </mat-card-title>
+                </mat-card-header>
+                <mat-card-subtitle>Django</mat-card-subtitle>
+                <mat-card-content>
+                <p>
+                    Quiz app offering a timed quiz and non-timed quizzes.  Also provides framework for integrating quizzes with in-app course material.
+                    This app can take a little while to spin up. (heroku)
+                </p>
+                </mat-card-content>
+                <mat-card-actions class="mat-card-actions-class">
+                    <a mat-raised-button class="hover-class-accent text-button" color="accent" href="https://gentle-brushlands-05163.herokuapp.com">
+                    Quiz App
+                    </a>
+                    <a mat-icon-button class="hover-class-accent" color="accent"
+                    href="https://github.com/cval245/patentbar-git">
+                    <mat-icon svgIcon="github" aria-hidden="false"></mat-icon>
+                    </a>
+                </mat-card-actions>
+                </mat-card>
+            <div>
+            </div>
+
+            <div>
                 <mat-divider></mat-divider>
                 <div class=header-container>
                 <div class="mat-typography">
                     <h2 class="mat-title">Skills</h2>
                 </div>
                 </div>
-                <mat-list-item role="listitem">
-                <div matLine> 
+        <div gdcolumns="repeat(auto-fill, minmax(200px, 1fr))" gdgap="15px"
+     style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin: 15px;"
+>
+                <div class="item" fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon svgIcon="angular" aria-hidden="true">
+                        </mat-icon>
+                    <div><p class="font-s">Angular</p></div>
                 </div>
-                <div matLine>
-                        Django
-                </div>
-                <div matLine>
-                    DjangoRestFramework
-                </div>
-                <div matLine>
-                    Angular
-                </div>
-                <div matLine>
-                    rxjs, ngrx
-                </div>
-                <div matLine>
-                    Postgresql
+               <div class="item" fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon svgIcon="rxjs" aria-hidden="true">
+                        </mat-icon>
+                    <div><p class="font-s">RXJS</p></div>
                 </div>
 
-            </mat-list-item>
-            </mat-list>
+                <div class="item" fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon svgIcon="ngrx" aria-hidden="true">
+                        </mat-icon>
+                    <div><p class="font-s">NGRX</p></div>
+                </div>
+                <div class="item" fxLayout="row" fxLayoutAlign="start center">
+                        <mat-icon svgIcon="django" aria-hidden="true">
+                        </mat-icon>
+                        <div><p class="font-s">Django</p></div>
+                </div>
+                <div class="item" fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon svgIcon="drf" aria-hidden="true">
+                        </mat-icon>
+                    <div><p class="font-s">Django Rest Framework</p></div>
+                </div>
+                <div class="item" fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon svgIcon="postgres" aria-hidden="true">
+                        </mat-icon>
+                    <div><p class="font-s">PostgreSQL</p></div>
+                </div>
             </div>
-            <div>
-            <mat-list>
-            <mat-divider></mat-divider>
-            <div mat-subheader>Websites</div>
-            <mat-list-item role="listitem">
-                                <div matLine>
-                    <a mat-raised-button color="accent" href="https://patport.cc" >
-                        Patport Cost Estimator
-                    </a>
-                </div>
-            </mat-list-item>
-            
-            <mat-list-item role="listitem">
-                <div matLine>
-                    <a mat-raised-button color="accent" href="https://gentle-brushlands-05163.herokuapp.com">
-                    Quiz App
-                    </a>
-                </div>
-            </mat-list-item>
-            <mat-list-item role="listitem">
-                <div matLine>
-                    <a mat-raised-button color="accent" href="https://github.com/cval245">
-                        <mat-icon svgIcon="github" aria-hidden="false"></mat-icon>
-                        GitHub Account
-                    </a>
-                </div>
-            </mat-list-item>
-            </mat-list>
-            </div>
-
+           </div> 
             <div>
             <mat-list>
             <mat-divider></mat-divider>
@@ -89,3 +147,4 @@
             </mat-list>
             </div>
 </div>
+

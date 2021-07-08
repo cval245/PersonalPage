@@ -14,14 +14,51 @@
         </mat-toolbar>
     </header>
 
-    <div class="over-main" fxLayout="row">
+    <div class="over-main" fxLayout="row" fxLayoutAlign="space-between">
         <div class="app-nav" fxShow fxHide.xs="true">
+        <mat-list>
+        <mat-list-item>
+        <button mat-raised-button fxFlex class="hover-resume-btn resume-btn" 
+        (click)="download()" >
+        Resume
+        </button>
+        </mat-list-item>
+
+        <mat-list-item fxLayout="row" fxLayoutAlign="center" style="margin-top: 10px">
+            <h2 style="margin:0px;">Websites</h2>
+        </mat-list-item>
+            <mat-list-item role="listitem">
+                                <div matLine>
+                    <a mat-raised-button fxFlex class="hover-class-accent" color="accent" href="https://patport.cc" >
+                        Patport
+                    </a>
+                </div>
+            </mat-list-item>
+            
+            <mat-list-item role="listitem">
+                <div matLine>
+                    <a mat-raised-button fxFlex class="hover-class-accent" color="accent" href="https://gentle-brushlands-05163.herokuapp.com">
+                    Quiz App
+                    </a>
+                </div>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <div matLine>
+                    <a mat-raised-button fxFlex class="hover-class-accent" color="accent" href="https://github.com/cval245">
+                        <mat-icon svgIcon="github-white" aria-hidden="false"></mat-icon>
+                        GitHub
+                    </a>
+                </div>
+            </mat-list-item>
+            </mat-list>
         </div>
         <div class="app-main">
-            <router-outlet></router-outlet>
+        <app-home-page></app-home-page>
         </div>
-        <div class="app-aside" fxShow fxHide.sm="true"  fxHide.xs="true">
+        <div class="app-aside" fxShow fxHide.sm="true" fxHide.xs="true">
         </div>
+        
+
     </div>
 
     <footer class="app-footer" fxLayout="row" fxLayoutAlign="center center">

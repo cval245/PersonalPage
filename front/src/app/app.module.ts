@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { MatSliderModule } from '@angular/material/slider';
-import { AppRoutingModule } from './app-routing.module';
+//import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatGridListModule } from '@angular/material/grid-list';
+//import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
@@ -31,13 +30,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule,
+        //AppRoutingModule,
         FlexLayoutModule,
         BrowserAnimationsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        MatSliderModule,
-        MatGridListModule,
+        //MatSliderModule,
+        //MatGridListModule,
         MatToolbarModule,
         MatListModule,
         MatIconModule,
