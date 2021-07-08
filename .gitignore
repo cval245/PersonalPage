@@ -45,4 +45,4 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/secrets.json
+/back/secrets.json

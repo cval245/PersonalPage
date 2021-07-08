@@ -31,7 +31,6 @@ export class AppComponent {
     ){
         this.getSerSub = this.emailFormService.getSer().subscribe(data => {
             
-            console.log('sdfsdfsdfsdfsdf')
             //this.sendLEmail(data)
         })
         this.matIconRegistry.addSvgIcon(
@@ -58,12 +57,10 @@ export class AppComponent {
     }
 
     sendLEmail(data: Mail){
-        console.log('data', data)
         this.emailServ.sendMail(data).pipe(shareReplay()).subscribe(x => console.log(x))
     }
     download(){
         this.downloadSer.download().subscribe(data =>{
-            console.log(data)
             let url = window.URL.createObjectURL(data)
             let pwa = window.open(url);
             if (!pwa || pwa.closed || typeof pwa.closed == 'undefined') {

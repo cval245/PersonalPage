@@ -10,21 +10,34 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 import os
+import json
+from django.core.exceptions import ImproperlyConfigured
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+with open(os.path.join(BASE_DIR, 'secrets.json')) as secrets_file:
+    secrets = json.load(secrets_file)
+
+def get_secret(setting, secrets=secrets):
+    """Get secret setting or fail with ImproperlyConfigured"""
+    try:
+        return secrets[setting]
+    except KeyError:
+        raise ImproperlyConfigured("Set the {} setting".format(setting))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4$ki-cj6w)vr4fs$^nmqr-3x5os^g89c)8#r-gi(q%p9uj*r&m'
+SECRET_KEY = get_secret('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','api.cval.me']
+ALLOWED_HOSTS = ['api.cval.me']
 
 
 # Application definition
@@ -125,9 +138,6 @@ STATIC_URL = '/static/'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",
-    "https://localhost:8000",
-    "http://localhost:4200",
     "http://www.cval.me",
     "http://cval.me",
 ]
@@ -136,7 +146,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'mail.privateemail.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'cval.me@patport.cc'
-EMAIL_HOST_PASSWORD = '4o8XGOCv$Xg78%k#1uTy' #'4o8XGOCv$Xg78%k#1uTy'
+EMAIL_HOST_PASSWORD = get_secret('EMAIL_PASSWORD')
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 

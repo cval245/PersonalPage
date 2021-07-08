@@ -41,11 +41,9 @@ export class EmailFormComponent implements OnInit {
     }
 
     getErrorMessage(){
-        console.log('get')
         if (this.f.email.hasError('required')){
             return 'You must enter a value';
         }
-        console.log('sss')
         return this.f.email.hasError('email') ? 'Not a valid email':'';
     }
 
@@ -56,7 +54,6 @@ export class EmailFormComponent implements OnInit {
     onSubmit(){
         if (this.submitted == false) {
             if(this.emailForm.valid) {
-                console.log('email submit')
                 this.submitted = true;
                 this.emailFormService.setSer(this.emailForm.value)
                 this.close()

@@ -10,7 +10,6 @@ class MailSerializer(serializers.Serializer):
     content = serializers.CharField()
 
     def sendMail(self):
-        print(self, "printing self")
         message = self.data['content']+ '\n\n\n from %s, %s'%(self.data['name'],
                                                        self.data['company'])
         send_mail(self.data['subject'], message, None,

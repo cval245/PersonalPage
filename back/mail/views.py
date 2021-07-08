@@ -21,6 +21,5 @@ def sendEmail(request):
         if serializer.is_valid():
             #serializer.sendMail()
             result = send_email(serializer)
-            #print('result.get', result.get(timeout=1))
             return JsonResponse(serializer.data, status=201)
         return JsonResponse(serializer.errors, status=400)

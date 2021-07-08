@@ -15,14 +15,10 @@ export class EmailFormService {
     constructor() { }
 
     getSer(){
-        console.log('getServ')
-        //console.log('gggg', this.getServ.subscribe(x => console.log("cccc",  x)))
-        //return this.getServ
         return this.ser
     }
 
     setSer(data: Mail){
-        console.log('serSer')
         this.ser.next(data)
     }
 

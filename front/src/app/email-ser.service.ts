@@ -15,7 +15,6 @@ export class EmailSerService {
     constructor(private http: HttpClient) { }
 
     public sendMail(mail: Mail): Observable<Mail> {
-        console.log('send mail', mail, this.baseUrl)
         return this.http.post<Mail>(this.baseUrl, mail)
     }
 }
