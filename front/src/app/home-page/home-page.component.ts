@@ -82,12 +82,10 @@ export class HomePageComponent {
     }
 
     sendEmail(data: Mail) {
-        console.log('data', data)
         this.emailServ.sendMail(data).subscribe()
     }
     download(){
         this.downloadSer.download().subscribe(data =>{
-            console.log(data)
             let url = window.URL.createObjectURL(data)
             let pwa = window.open(url);
             if (!pwa || pwa.closed || typeof pwa.closed == 'undefined') {
