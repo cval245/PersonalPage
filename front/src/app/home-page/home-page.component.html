@@ -8,7 +8,7 @@
 
         <div fxLayout="column" fxLayoutAlign="center center">
             <div class='personal-statement'><p>
-            I am transitioning from a career in IP (patents) to web development.  I started this journey making a quiz app as a study aid for a professional exam.  Now I am excited to be improving my skills daily.
+            I am transitioning from a career in IP (patents) to web development.  I started this journey making a quiz app as a study aid for a professional exam.  Now I am excited to be daily improving my web development skills.
             </p>
             
             </div>
@@ -50,10 +50,16 @@
                     <a mat-raised-button class="hover-class-accent text-button" color="accent" href="https://patport.cc" >
                         Patport
                     </a>
-                    <a mat-icon-button class="hover-class-accent" color="accent"
-                    href="https://github.com/cval245/pestimator">
-                    <mat-icon svgIcon="github" aria-hidden="false"></mat-icon>
+                    <a mat-icon-button class="hover-class-accent-git git-btn" color="accent"
+                    href="https://github.com/cval245/pestimator"
+                    (mouseover)="mouseOver('patport')" 
+                    (mouseleave)="mouseLeave('patport')">
+                    <mat-icon *ngIf="githubBlackPatPort ==true;" svgIcon="github" aria-hidden="false" 
+                     ></mat-icon>
+                    <mat-icon *ngIf="githubBlackPatPort == false;" svgIcon="github-white" aria-hidden="false" 
+                    ></mat-icon>
                     </a>
+                    
                 </mat-card-actions>
                     </mat-card>
             </div>
@@ -74,9 +80,14 @@
                     <a mat-raised-button class="hover-class-accent text-button" color="accent" href="https://gentle-brushlands-05163.herokuapp.com">
                     Quiz App
                     </a>
-                    <a mat-icon-button class="hover-class-accent" color="accent"
-                    href="https://github.com/cval245/patentbar-git">
-                    <mat-icon svgIcon="github" aria-hidden="false"></mat-icon>
+                    <a mat-icon-button class="hover-class-accent-git git-btn" color="accent"
+                    href="https://github.com/cval245/patentbar-git"
+                    (mouseover)="mouseOver('quiz')" 
+                    (mouseleave)="mouseLeave('quiz')">
+                    <mat-icon *ngIf="githubBlackQuiz ==true;" svgIcon="github" aria-hidden="false" 
+                     ></mat-icon>
+                    <mat-icon *ngIf="githubBlackQuiz == false;" svgIcon="github-white" aria-hidden="false" 
+                    ></mat-icon>
                     </a>
                 </mat-card-actions>
                 </mat-card>

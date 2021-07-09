@@ -16,6 +16,8 @@ import { Mail } from '../mail.model';
 })
 export class HomePageComponent {
     @ViewChild("dialogRef") dialogRef: TemplateRef<any>;
+    public githubBlackPatPort = true;
+    public githubBlackQuiz = true;
 
     constructor(
         private bottomSheet: MatBottomSheet,
@@ -79,6 +81,21 @@ export class HomePageComponent {
 
     openBottomSheet(): void {
         this.bottomSheet.open(ContactMeSheet)
+    }
+    mouseOver(name: string){
+        if (name=='patport'){
+            this.githubBlackPatPort=false;
+        }else if (name=='quiz'){
+            this.githubBlackQuiz=false;
+        }
+    }
+    mouseLeave(name: string){
+        if (name=='patport'){
+            this.githubBlackPatPort=true;
+        } else if (name=='quiz'){
+            this.githubBlackQuiz=true;
+        }
+
     }
 
     sendEmail(data: Mail) {

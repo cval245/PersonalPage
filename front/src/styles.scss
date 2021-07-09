@@ -74,6 +74,10 @@ body {
 .hover-class-accent:hover{
     background-color: map-get($theme-accent, 'darker');
 }
+.hover-class-accent-git:hover{
+    background-color: map-get($theme-accent, 'main');
+}
+
 
 .item{
     display: flex;
