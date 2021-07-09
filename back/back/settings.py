@@ -138,8 +138,8 @@ STATIC_URL = '/static/'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://www.cval.me",
-    "http://cval.me",
+    "https://www.cval.me",
+    "https://cval.me",
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

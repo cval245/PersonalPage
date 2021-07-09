@@ -15,7 +15,6 @@ export class DownloadService {
     download(){
         return this.http.get(this.baseUrl, {
             responseType: 'blob',
-            //headers: new Headers({'Content-Type', 'application/x-www-form-urlencoded'})
         })
             }
 }
