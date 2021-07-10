@@ -1,6 +1,7 @@
+<meta name="description" content="home page for Christopher Valentine's website portfolio">
 <div>
 <div style="width: auto; height:200px; text-align: center; padding: 0px;">
-    <img style='width: 100%; height: 100%; object-fit: cover;' src="assets/images/triangles-min.svg">
+    <img style='width: 100%; height: 100%; object-fit: cover;' src="assets/images/triangles-min.svg" alt="">
     </div>
     <div class="header-container mat-typography">
                     <h2 class="mat-title">About</h2>
@@ -37,10 +38,10 @@
                 <mat-card-content>
                 <mat-card-subtitle>Angular + Django</mat-card-subtitle>
                 <div class="img-container">
-                <img fxFlex src="assets/images/patport.png" (click)="openImageModal('assets/images/patport.png')">
+                <img fxFlex alt="patport website snapshot" src="assets/images/patport.webp" (click)="openImageModal('assets/images/patport.webp')">
                 <ng-template #dialogRef let-data><img class="override-img" src={{data}}></ng-template>
-                <img fxFlex src="assets/images/patport-chart.png"
-                    (click)="openImageModal('assets/images/patport-chart.png')">
+                <img fxFlex alt="patport website with charts snapshot" src="assets/images/patport-chart.webp"
+                    (click)="openImageModal('assets/images/patport-chart.webp')">
                 </div>
                 <p>
                    App for estimating the costs of a patent portfolio based off the patent filing plan. 

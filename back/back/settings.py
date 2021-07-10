@@ -37,7 +37,7 @@ SECRET_KEY = get_secret('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['api.cval.me']
+ALLOWED_HOSTS = ['api.cval.me', 'localhost:80', 'localhost:8000']
 
 
 # Application definition
@@ -136,10 +136,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
 CORS_ALLOWED_ORIGINS = [
     "https://www.cval.me",
     "https://cval.me",
+    "http://localhost:4200",
+    "http://localhost:8000",
+    "http://localhost:80",
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
